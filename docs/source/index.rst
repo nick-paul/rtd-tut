@@ -22,6 +22,7 @@ Contents
 
    usage
    api
+   newpage
 
 
 Lumache has its documentation hosted on Read the Docs.
