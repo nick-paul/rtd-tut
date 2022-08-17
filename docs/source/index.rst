@@ -20,9 +20,16 @@ Contents
 
 .. toctree::
 
-   usage
-   api
+   tour
+   syntax_overview
+   operators
+   number
    lists
+   characters_and_strings
+   blocks_and_functions
+   dictionaries_and_user_types
+   variables_and_scope
+
 
 
 Lumache has its documentation hosted on Read the Docs.
