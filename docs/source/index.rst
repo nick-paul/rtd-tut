@@ -22,7 +22,6 @@ Contents
 
    usage
    api
-   newpage
    lists
 
 
