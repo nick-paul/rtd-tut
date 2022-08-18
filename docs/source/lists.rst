@@ -41,10 +41,10 @@ List grabbing only uses integer literals
        
 
 Essential List Operations
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 List Indexing
-~~~~~~~~~~~~~
+^^^^^^^^^^^^^
 
 Lists are indexed using square bracket syntax following a ``.``. For
 Example:
@@ -113,12 +113,12 @@ Use the following syntax to set elements of a list
 which is equivalent to ``list[i] = item`` in C-style languages.
 
 Essential List Operators
-~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 *See*\ `Operators <https://github.com/aya-lang/aya/wiki/Operators>`__
 
 Extend (``K``)
-^^^^^^^^^^^^^^
+''''''''''''''
 
 ::
 
@@ -130,7 +130,7 @@ Extend (``K``)
    [ 1 2 3 4 5 6 ] 
 
 Join (``J``)
-^^^^^^^^^^^^
+''''''''''''
 
 *Similar to ``K`` but never modifies either list*
 
@@ -143,7 +143,7 @@ Join (``J``)
    [ 1 2 3 ] 
 
 Reshape (``L``)
-^^^^^^^^^^^^^^^
+'''''''''''''''
 
 ::
 
@@ -155,7 +155,7 @@ Reshape (``L``)
    [ [ 1 2 3 ] [ 4 5 6 ] ]
 
 Flatten (``.F``)
-^^^^^^^^^^^^^^^^
+''''''''''''''''
 
 ::
 
@@ -163,7 +163,7 @@ Flatten (``.F``)
    [ 1 2 3 4 5 6 ] 
 
 Pop from front / back
-^^^^^^^^^^^^^^^^^^^^^
+'''''''''''''''''''''
 
 ::
 
@@ -173,7 +173,7 @@ Pop from front / back
    [ 2 3 ] 1 
 
 Append to front / back
-^^^^^^^^^^^^^^^^^^^^^^
+''''''''''''''''''''''
 
 ::
 
@@ -183,10 +183,10 @@ Append to front / back
    [ 1 2 3 ] 
 
 Generators
-~~~~~~~~~~
+^^^^^^^^^^
 
 Range (``R``)
-^^^^^^^^^^^^^
+'''''''''''''
 
 One item: create a range from ``1`` (or ``'a'``) to that number.
 
@@ -212,7 +212,7 @@ as a step.
    [2 2.5 4] R      .# => [2 2.5 3 3.5 4]
 
 List comprehension
-------------------
+~~~~~~~~~~~~~~~~~~
 
 When commas are used inside of a list literal, the list is created using
 list comprehension. List comprehension follows the format
@@ -275,7 +275,7 @@ sections.
    [ "hw" "eo" "lr" "ll" "od" ]
 
 The Broadcast Operator
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 ``#`` is a very powerful *infix* operator. It’s primary function is map.
 It takes the arguments from its right side and maps them to the list on
