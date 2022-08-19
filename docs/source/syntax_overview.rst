@@ -1,8 +1,10 @@
-Syntax Overview
-===============
+Table of Contents
+=================
 
-Execution
----------
+*See right panel for table of contents*
+
+Overview
+========
 
 Aya is a stack based language. Execution flows from left to right
 
@@ -16,10 +18,10 @@ Aya is a stack based language. Execution flows from left to right
    4 
 
 Comments
---------
+========
 
 Line Comments
-~~~~~~~~~~~~~
+-------------
 
 Line comments begin with ``.#``
 
@@ -31,7 +33,7 @@ Line comments begin with ``.#``
    aya> .#leading space optional
 
 Block Comments
-~~~~~~~~~~~~~~
+--------------
 
 Block comments start with ``.{`` and end with ``.}``
 
@@ -52,7 +54,7 @@ Block comments start with ``.{`` and end with ``.}``
    SYNTAX ERROR: .} is not a valid operator
 
 Variables
----------
+=========
 
 Use ``:varname`` to assign a variable. Use the plain variable name to
 access
@@ -101,19 +103,19 @@ Numbers and uppercase letters cannot be used for variables
       in :M .. y V ar 0}
 
 Special Variables
-~~~~~~~~~~~~~~~~~
+-----------------
 
 Double leading and trailing underscores are used for special variables
 
 *See operator overloading and metatables for examples*
 
 Numbers
--------
+=======
 
 *Main Page:*\ `Numbers <./Numbers>`__
 
 Integers & Decimals
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 ::
 
@@ -125,7 +127,7 @@ Integers & Decimals
    .5
 
 Negative Numbers
-~~~~~~~~~~~~~~~~
+----------------
 
 ``-`` is an operator, use ``:-`` for negative numbers.
 
@@ -145,7 +147,7 @@ The ``-`` can be omitted in some cases (useful for golfing). ``-`` or
    SYNTAX ERROR: :. is not a valid operator
 
 Big Numbers
-~~~~~~~~~~~
+-----------
 
 Arbitrary precision numbers have the form ``:Nz``
 
@@ -157,7 +159,7 @@ Arbitrary precision numbers have the form ``:Nz``
    :3.141592653589793238462643383279502884197169399z
 
 Hexadecimal Literals
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 Hexadecimal literals have the form ``:0xN``
 
@@ -175,7 +177,7 @@ automatically be promoted to a *big number*.
    :3735928559z
 
 Binary Literals
-~~~~~~~~~~~~~~~
+---------------
 
 Binary literals have the form ``:0bN``
 
@@ -193,7 +195,7 @@ be promoted to a *big number*.
    :801704815243z 
 
 Scientific/“e” Notation
-~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------
 
 Number literals of the form ``:NeM`` are evaluated to the literal number
 ``N * 10^M``.
@@ -208,7 +210,7 @@ Number literals of the form ``:NeM`` are evaluated to the literal number
    .0011
 
 Fractional Numbers
-~~~~~~~~~~~~~~~~~~
+------------------
 
 Fractional literals have the form ``:NrM``
 
@@ -222,7 +224,7 @@ Fractional literals have the form ``:NrM``
    :-1r4 
 
 PI Times
-~~~~~~~~
+--------
 
 Number literals of the form ``:NpM`` are evaluated to the literal number
 ``(N * PI)^M``. If no ``M`` is provided, use the value 1.
@@ -237,7 +239,7 @@ Number literals of the form ``:NpM`` are evaluated to the literal number
    88.82643961
 
 Root Constants
-~~~~~~~~~~~~~~
+--------------
 
 Number literals of the form ``:NqM`` are evaluated to the literal number
 ``N^(1/M)``. The default value of M is 2.
@@ -252,7 +254,7 @@ Number literals of the form ``:NqM`` are evaluated to the literal number
    3
 
 Number Constants
-~~~~~~~~~~~~~~~~
+----------------
 
 constants follow the format ``:Nc``
 
@@ -272,12 +274,12 @@ number  value
 ======= ==========
 
 Characters
-----------
+==========
 
 *Main Page:*\ `Characters & Strings <./characters-and-strings>`__
 
 Standard Characters
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 Characters are written with a single *single quote* to the left of the
 character:
@@ -294,7 +296,7 @@ character:
    'ÿ 
 
 Hex Character Literals
-~~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
 Hex literal characters are written using a ``'\x___'`` and **require
 closing quotes**.
@@ -307,7 +309,7 @@ closing quotes**.
    '¡ 
 
 Named Character Literals
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
 Many characters have names. All names consist only of lowercase
 alphabetical characters. Use ``Mk`` operator to add new named
@@ -321,12 +323,12 @@ characters.
    '\pi'        .# => 'π'
 
 Strings
--------
+=======
 
 *Main Page:*\ `Characters & Strings <./characters-and-strings>`__
 
 Standard String Literals
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
 String literals are written with double quotes (``"``):
 
@@ -353,7 +355,7 @@ Strings may span multiple lines.
        and a tab."
 
 Special Characters in Strings
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------
 
 Strings can contain special characters using ``\{___}``. Brackets can
 contain named characters or Unicode literals.
@@ -364,7 +366,7 @@ contain named characters or Unicode literals.
    "\{x00BF}Que tal?"            .# => "¿Que tal?"
 
 String Interpolation
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 Use ``$`` for string interpolation
 
@@ -397,7 +399,7 @@ If used with anything else, keep the ``$``
    "Each apple is worth $0.50"
 
 Long String Literals
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 Use triple quotes for long string literals.
 
@@ -415,7 +417,7 @@ No escape characters or string interpolation is processed
    "This is a long string literal $foo \{theta}"
 
 Symbols
--------
+=======
 
 Symbols are primarily used for metaprogramming. Symbols are any valid
 variable name starting with ``::``
@@ -434,12 +436,12 @@ the ``::``
    ::'My Symbol' 
 
 Lists
------
+=====
 
 *Main Page:*\ `Lists <./lists>`__
 
 List Literals
-~~~~~~~~~~~~~
+-------------
 
 Lists are written with square brackets (``[]``) and must not contain
 commas. They may contain any data type:
@@ -461,7 +463,7 @@ Lists may also contain expressions:
    [ 3 7 ]
 
 List Stack Captures
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 Use ``[N| ... ]`` to capture items off the stack into the list
 
@@ -475,15 +477,15 @@ Use ``[N| ... ]`` to capture items off the stack into the list
    [ 10 9 ] 
 
 List Comprehensions
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 *See*\ `list comprehensions <./lists>`__
 
 Indexing
-~~~~~~~~
+--------
 
 Get a value from a list
-^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Use ``.[ (index) ]`` to get a value from a list
 
@@ -497,7 +499,7 @@ Use ``.[ (index) ]`` to get a value from a list
    4 
 
 Set a value at an index in a list
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use ``(value) (list) .[ (index) ]`` to set a the value in a list at an
 index
@@ -510,13 +512,13 @@ index
    [ 10 2 3 4 ]
 
 Dictionaries
-------------
+============
 
 *Main Page:*\ `Dictionaries and User
 Types <./dictionaries-and-user-types>`__
 
 Dictionary Literals
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 Dictionary literals have the form ``{, ... }``. All variables assigned
 between ``{,`` and ``}`` are assigned to the dictionary
@@ -537,7 +539,7 @@ between ``{,`` and ``}`` are assigned to the dictionary
    {,}
 
 Getting Values
-~~~~~~~~~~~~~~
+--------------
 
 Use dot notation to get values from a dict:
 
@@ -583,7 +585,7 @@ Dot notation can be used with `quoted variables <#variables>`__
    1 
 
 Setting Values
-~~~~~~~~~~~~~~
+--------------
 
 Use ``.:`` notation to set values of a dict
 
@@ -624,12 +626,12 @@ This notation can be used with `quoted variables <#variables>`__
    } 
 
 Blocks
-------
+======
 
 *Main Page:*\ `Blocks & Functions <./blocks-and-functions>`__
 
 Basic Blocks
-~~~~~~~~~~~~
+------------
 
 Use ``{...}`` to define a code block.
 
@@ -649,7 +651,7 @@ the variable is accessed
    6 
 
 Short Block Notation
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 Any set of tokens following a tick (```) until an operator or variable
 will be parsed as a block. Useful for saving a character when golfing
@@ -673,7 +675,7 @@ This notation also terminates at variables names
    {1 x} 1 
 
 Block Headers
-~~~~~~~~~~~~~
+-------------
 
 Use a comma in a block to create a block *header*. Block headers define
 local variables and block arguments
@@ -691,7 +693,7 @@ If the header is empty, the block is parsed as a dict (see *Dictionary*)
    } 
 
 Arguments
-^^^^^^^^^
+~~~~~~~~~
 
 Add arguments to a block
 
@@ -720,7 +722,7 @@ not match
      Error in: foo
 
 Local Variables
-^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~
 
 To declare local variables for a block, use a ``:`` in the header:
 ``{: ... ,}``
@@ -762,12 +764,12 @@ Can mix & match locals and arguments
    {arg typed_arg::str : default_locl(0)initialized_local(10)captured_local(9),} 
 
 Operators
----------
+=========
 
 *Main Page:*\ `Operators <./operators.md>`__
 
 Standard Operators
-~~~~~~~~~~~~~~~~~~
+------------------
 
 All single uppercase letters except ``M`` are operators
 
@@ -779,7 +781,7 @@ All single uppercase letters except ``M`` are operators
    [ 4 5 ] 
 
 “Dot” Operators
-~~~~~~~~~~~~~~~
+---------------
 
 Most characters immediately following a dot (``.``) are an operator
 
@@ -791,7 +793,7 @@ Most characters immediately following a dot (``.``) are an operator
    1 
 
 Exceptions
-^^^^^^^^^^
+~~~~~~~~~~
 
 ============ ===================================
 Special Case Description
@@ -803,7 +805,7 @@ Special Case Description
 ============ ===================================
 
 Dereference Without Executing (``.<grave>``)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ``.<grave>`` Dereference a variable without executing the block
 
@@ -826,7 +828,7 @@ If the variable is not a block dereference it normally
    1 
 
 “Colon” Operators
-~~~~~~~~~~~~~~~~~
+-----------------
 
 Most characters immediately following a color (``:``) are an operator
 
@@ -838,7 +840,7 @@ Most characters immediately following a color (``:``) are an operator
 .. _exceptions-1:
 
 Exceptions
-^^^^^^^^^^
+~~~~~~~~~~
 
 ============ =============================================
 Special Case Description
@@ -849,7 +851,7 @@ Special Case Description
 ============ =============================================
 
 “Misc” Operators
-~~~~~~~~~~~~~~~~
+----------------
 
 ``M`` plus any character is an operator
 
@@ -861,10 +863,10 @@ Special Case Description
    .47942554 
 
 Non-Standard “Infix” Stack Operators
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------
 
 List Map (``:#``)
-^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~
 
 The ``:#`` operator takes a block on its *right* and maps it to the list
 on the stack
@@ -875,7 +877,7 @@ on the stack
    [ 2 3 4 ] 
 
 List Map Shorthand (``#``)
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 *See*\ `Broadcast
 Operator <https://github.com/aya-lang/aya/wiki/Lists#the-broadcast-operator>`__
@@ -889,7 +891,7 @@ notation <#short-block-notation>`__
    [2 3 4]
 
 Capture Instructions (`:``)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Takes a block ``B`` and a number ``N`` from the stack. Captures ``N``
 instructions from the instruction stack. See `Metaprogramming <x>`__ for
@@ -901,7 +903,7 @@ more details
    "[ {1} {+} ]"
 
 Extension Operators
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 Extension operators have the form ``:{...}``.
 
@@ -920,13 +922,13 @@ almost never be used for normal development
    Jan 02, 1970 5:17:36 AM 
 
 User Types
-----------
+==========
 
 Struct
-~~~~~~
+------
 
 Defining A Struct
-^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~
 
 Create a struct with the following syntax:
 
@@ -943,7 +945,7 @@ For example:
    (struct ::point [ ::x ::y ])
 
 Create Instance Of Struct
-^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To create an instance of a struct, use the ``!`` operator on the type.
 Member variables should exist on the stack
@@ -955,7 +957,7 @@ Member variables should exist on the stack
    ( 1 2 ) point!
 
 Accessing Values of a Struct
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use standard dot notation to acces user type values
 
@@ -970,7 +972,7 @@ Use standard dot notation to acces user type values
    2 
 
 Struct Member Functions
-^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Use the ``def`` keyword to define member functions for structs
 
@@ -983,10 +985,10 @@ Use the ``def`` keyword to define member functions for structs
    "<1, 2>" 
 
 Golf Utilities
---------------
+==============
 
 Golf Constants
-~~~~~~~~~~~~~~
+--------------
 
 Any single-character key stored in ``__cdict__`` can be accessed using
 ``¢`` + that character

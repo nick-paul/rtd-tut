@@ -56,7 +56,7 @@ operator.
    aya> '\U222b' "integral" Mk
 
    aya> '\integral'
-   '∫' 
+   '∫'
 
 Strings
 =======

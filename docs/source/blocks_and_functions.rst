@@ -108,11 +108,11 @@ symbol will be used for type assertions.
 
    {,
      ::vec :type;
-     
+
      ... define vec variables and functions ...
    }:vec;
 
-   {v::vec, 
+   {v::vec,
      v :P
    }:printvec;
 
@@ -121,7 +121,7 @@ The type checker will use the ``.type`` variable:
 ::
 
    aya> 1 2 vec! :v
-   <1,2> 
+   <1,2>
    aya> v printvec
    <1,2>
    aya> 3 printvec
@@ -139,7 +139,7 @@ document. Local declarations can not have type declarations.
 ::
 
    aya> "A":a
-   "A" 
+   "A"
    aya> a println {:a, "B":a; a println}~ a println
    A
    B
@@ -164,18 +164,18 @@ variables.
 ::
 
    aya> 99 :l
-   99 
+   99
 
    aya> {: a(l), a} ~
    SYNTAX ERROR: Block header: Local Variables Initializer: Must contain only const values
 
    aya> .# define a as a function which evaluates to l
    aya> {: a({l}), a} ~
-   99 
+   99
 
    aya> .# define a as a list which evaluates to l
    aya> {: a([l]), a} ~
-   [ 99 ] 
+   [ 99 ]
 
 Keyword Arguments
 -----------------
@@ -224,8 +224,8 @@ of the block onto the instruction stack and then continues evaluating.
 Functions can take advantage of anything that a normal block can
 including arguments and argument types.
 
-| Here are a few examples of function definitions:
-| ``swapcase`` takes a character and swaps its case.
+Here are a few examples of function definitions: ``swapcase`` takes a
+character and swaps its case.
 
 ::
 
@@ -257,7 +257,7 @@ type assertions.
    }:swapitems;
 
    aya> [1 2 3 4 5] 0 3 swapitems
-   [ 4 2 3 1 5 ] 
+   [ 4 2 3 1 5 ]
 
 To see more examples check out the standard library located at
-/base/std.elem
+/base/std.aya

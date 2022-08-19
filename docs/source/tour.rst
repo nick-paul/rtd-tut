@@ -1,8 +1,5 @@
-Tour of Aya
-===========
-
 Basic language features
------------------------
+=======================
 
 Aya is a stack based language.
 
@@ -62,12 +59,12 @@ cool operators. For example:
    [4 4 4]
 
 -  Many operators are broadcasted automatically however. For example:
-   the square root (``.^``), addition (``+``), and multiplication
+   the square root (``Mq``), addition (``+``), and multiplication
    (``*``) operators.
 
 ::
 
-   aya> [4 16 64 ] .^
+   aya> [4 16 64 ] Mq
    [ 2 4 8 ]
    aya> [1 2 3] 1 +
    [ 2 3 4 ]
@@ -220,7 +217,7 @@ Dictionaries also support metatables.
    aya> {, {v, v.x v.y +}:add; "hello":foo; } :mtable;
    aya> {, 1:x 6:y }:point;
    {, 1:x; 6:y; }
-   aya> point mtable :M; .# Set mtable as point's metatable
+   aya> point mtable MO; .# Set mtable as point's metatable
 
 Keys from metatables are available but hidden.
 
@@ -241,7 +238,7 @@ more details.*
 
 ::
 
-   aya> struct point {x y}
+   aya> struct ::point [::x ::y]
    aya> 3 4 point! :p
    ( 3 4 ) point!
    aya> [1 "hello" p] #:T
@@ -272,7 +269,7 @@ completely in aya!)*, **exception handling**, built in **plotting** and
 **GUI dialogs**, **list comprehension**, and **more**!
 
 Standard library
-----------------
+================
 
 The Aya standard library consists of type definitions, mathematical
 functions, string and list operations, plotting tools and even a small
@@ -283,7 +280,7 @@ contains a file which defines extended ASCII operators for use when code
 golfing.
 
 ``matrix``
-^^^^^^^^^^
+~~~~~~~~~~
 
 The ``matrix`` type provides a basic interface and operator overloads
 for working with matrices.
@@ -308,7 +305,7 @@ for working with matrices.
    |   20    8  -56 |
 
 ``dataframe``
-^^^^^^^^^^^^^
+~~~~~~~~~~~~~
 
 The ``dataframe`` type is an interface for working with tables. CSV
 files can be directly imported and modified or the data can be generated
@@ -316,7 +313,7 @@ by the program itself.
 
 ::
 
-   aya> {, "examples/data/simple.csv":filename } dataframe! :df
+   aya> {, "data/simple.csv":filename } dataframe! :df
             A    B    C
      0 |    1    2    3
      1 |    4    5    6
@@ -340,7 +337,7 @@ by the program itself.
      z |    3    6
 
 ``golf``
-^^^^^^^^
+~~~~~~~~
 
 ``golf`` defines many short variables that are useful when golfing. It
 also uses the ``Mk`` operator to add additional single character
@@ -366,7 +363,7 @@ A few more examples
    [ 2 3 10 1000 [ ] 3.14159265 -1 0 {+} {-} ]
 
 ``date``
-^^^^^^^^
+~~~~~~~~
 
 The date script provides a basic interface for the date parsing
 operators ``Mh`` and ``MH``. It also provides basic date unit addition
@@ -387,7 +384,7 @@ and subtraction.
    "07/01/17"
 
 ``set``
-^^^^^^^
+~~~~~~~
 
 The ``set`` script defines a ``set`` type and many operator overloads.
 It defines ``s`` as a prefix operator for the set constructor allowing
@@ -408,7 +405,7 @@ the syntax ``s[ ... ]`` to create sets.
    s[ 1 3 ]
 
 ``enum``
-^^^^^^^^
+~~~~~~~~
 
 The ``enum`` script defines the ``enum`` keyword which uses dictionaries
 and metatables to create enums.
@@ -433,7 +430,7 @@ and metatables to create enums.
    1
 
 ``color``
-^^^^^^^^^
+~~~~~~~~~
 
 The ``color`` script defines basic color constructors and conversions.
 
@@ -459,7 +456,7 @@ The ``color`` script defines basic color constructors and conversions.
        0    0  255
 
 ``file``
-^^^^^^^^
+~~~~~~~~
 
 The ``file`` script defines variables for moving around and exploring
 the directory tree. It also defines the ``file`` type which is used for
@@ -467,12 +464,20 @@ opening and editing files.
 
 ::
 
-   aya> cd "examples/data"
-   /home/nick/Documents/aya-lang/examples/data/
+   aya> cd "data"
+   /home/nick/Documents/aya-lang/data/
 
    aya> ls
-
-
+     /rdatasets
+     catalog.csv
+     colors.csv
+     cor.csv
+     p022_names.txt
+     realvals.csv
+     satwords.txt
+     simple.csv
+     simplemat.txt
+     words.txt
 
    aya> more "simple.csv"
    A, B, C

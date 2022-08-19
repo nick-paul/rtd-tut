@@ -29,7 +29,7 @@ Empty dictionaries are created if the block and the header are empty.
 
    aya> {,}
    {,
-   } 
+   }
 
 Accessing Values
 ----------------
@@ -41,7 +41,7 @@ name.
 ::
 
    aya> numbers .one
-   1 
+   1
 
    .# whitespace is optional
    aya> numbers.two
@@ -58,18 +58,18 @@ Dictionary values can be assigned using the ``.:`` operator.
    {,
      1:a;
      2:b;
-   } 
+   }
    aya> 4 d.:a
    {,
      4:a;
      2:b;
-   } 
+   }
    aya> 9 d.:c
    {,
      4:a;
      2:b;
      9:c;
-   } 
+   }
 
 They may also be dynamically assigned using the following syntax:
 
@@ -89,14 +89,14 @@ For example:
    {,
      0:x;
      1:y;
-   } 
+   }
 
    aya> dict :# {k v, v 1 + dict.:[k]}
    aya> dict
    {,
      1:x;
      2:y;
-   } 
+   }
 
 Metatables
 ==========
@@ -137,13 +137,13 @@ and the metatable value will be evaluated.
 ::
 
    aya> dict.sum
-   3 
+   3
    aya> dict.donothing
    {,
      1:x;
      2:y;
      {}:none;
-   } 
+   }
 
 We can still add and access dictionary values normally. If we overwrite
 a metatable key, it will override the value locally in the dictionary,
@@ -155,25 +155,25 @@ not the entire metatable.
    {,
      1:x;
      2:y;
-   } 
+   }
    aya> {, 3:x 4:y} meta MO :b
    {,
      3:x;
      4:y;
-   } 
+   }
    aya> {;"Something!":P} a.:donothing
    {,
      1:x;
      2:y;
      {; "Something!" :P}:donothing;
-   } 
+   }
    aya> a.donothing
    Something!
    aya> b.donothing
    {,
      3:x;
      4:y;
-   } 
+   }
 
 User-Defined Types
 ==================
@@ -192,7 +192,7 @@ and then walk through each of the import steps involved in making it.
 
      .# Member functions
 
-     {self, 
+     {self,
        "<$(self.x),$(self.y)>"
      }:repr:str;
 

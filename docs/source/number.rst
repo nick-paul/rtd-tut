@@ -30,7 +30,7 @@ To write negative numbers, use a colon (with or without a -)
    :-1.5  .# => -1.5
 
 Special Number Literals
------------------------
+=======================
 
 *See*\ `Syntax Overview:
 Numbers <https://github.com/aya-lang/aya/wiki/Syntax-Overview#numbers>`__
@@ -75,12 +75,12 @@ binary and hexadecimal formatting.
    :0xffffffff   .# 4294967295 (BigNum)
 
 Misc. Number Literals
----------------------
+=====================
 
 Like all number literals, these values are evaluated pre-runtime.
 
 Scientific Notation
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 Number literals of the form ``:NeM`` are evaluated to the literal number
 ``N * 10^M``.
@@ -95,7 +95,7 @@ Number literals of the form ``:NeM`` are evaluated to the literal number
    .0011 
 
 PI Times
-~~~~~~~~
+--------
 
 Number literals of the form ``:NpM`` are evaluated to the literal number
 ``(N * PI)^M``. If no ``M`` is provided, use the value 1.
@@ -110,7 +110,7 @@ Number literals of the form ``:NpM`` are evaluated to the literal number
    88.82643961 
 
 Root Constants
-~~~~~~~~~~~~~~
+--------------
 
 Number literals of the form ``:NqM`` are evaluated to the literal number
 ``N^(1/M)``. The default value of M is 2.

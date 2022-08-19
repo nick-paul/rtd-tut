@@ -32,19 +32,18 @@ List grabbing only uses integer literals
 ::
 
    aya> 2 :n
-   2 
+   2
    aya> 1 2 [n| 3 4]
    ERROR: Empty stack at operator '|'
    stack:
-       1 2 
+       1 2
    just before:
-       
 
 Essential List Operations
-~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 List Indexing
-^^^^^^^^^^^^^
+~~~~~~~~~~~~~
 
 Lists are indexed using square bracket syntax following a ``.``. For
 Example:
@@ -52,9 +51,9 @@ Example:
 ::
 
    aya> ["the" "cat" "in" "the" "hat"]:list
-   [ "the" "cat" "in" "the" "hat" ] 
+   [ "the" "cat" "in" "the" "hat" ]
    aya> list.[0]
-   "the" 
+   "the"
 
 Aya supports negative indexing, multiple indexing and filtering with
 this syntax.
@@ -62,11 +61,11 @@ this syntax.
 ::
 
    aya> list.[:1]
-   "hat" 
+   "hat"
    aya> list.[1 4]
-   [ "cat" "hat" ] 
+   [ "cat" "hat" ]
    aya> list.[{E 3 =}]
-   [ "the" "cat" "the" "hat" ] 
+   [ "the" "cat" "the" "hat" ]
 
 +------+-----------------------------------------+--------------+-----+
 | Arg  | Function                                | Input        | Out |
@@ -89,18 +88,18 @@ Lists can also be indexed using the ``I`` operator:
 ::
 
    aya> ["the" "cat" "in" "the" "hat"]:list
-   [ "the" "cat" "in" "the" "hat" ] 
+   [ "the" "cat" "in" "the" "hat" ]
    aya> list 0 I
-   "the" 
+   "the"
    aya> list :1 I
-   "hat" 
+   "hat"
 
 ``.I`` operator takes a default value if the index is out of bounds:
 
 ::
 
    aya> ["hello" "world"] 0 "nope" .I
-   "hello" 
+   "hello"
    aya> ["hello" "world"] 9 "nope" .I
    "nope"
 
@@ -113,24 +112,24 @@ Use the following syntax to set elements of a list
 which is equivalent to ``list[i] = item`` in C-style languages.
 
 Essential List Operators
-^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 *See*\ `Operators <https://github.com/aya-lang/aya/wiki/Operators>`__
 
 Extend (``K``)
-''''''''''''''
+^^^^^^^^^^^^^^
 
 ::
 
    aya> [1 2 3] :list
-   [ 1 2 3 ] 
+   [ 1 2 3 ]
    aya> list [4 5 6] K
-   [ 1 2 3 4 5 6 ] 
+   [ 1 2 3 4 5 6 ]
    aya> list
-   [ 1 2 3 4 5 6 ] 
+   [ 1 2 3 4 5 6 ]
 
 Join (``J``)
-''''''''''''
+^^^^^^^^^^^^
 
 *Similar to ``K`` but never modifies either list*
 
@@ -138,55 +137,55 @@ Join (``J``)
 
    aya> [1 2 3] :list;
    aya> list [4 5 6] J
-   [ 1 2 3 4 5 6 ] 
+   [ 1 2 3 4 5 6 ]
    aya> list
-   [ 1 2 3 ] 
+   [ 1 2 3 ]
 
 Reshape (``L``)
-'''''''''''''''
+^^^^^^^^^^^^^^^
 
 ::
 
    aya> 9R [3 3] L
-   [ [ 1 2 3 ] [ 4 5 6 ] [ 7 8 9 ] ] 
+   [ [ 1 2 3 ] [ 4 5 6 ] [ 7 8 9 ] ]
    aya> [1 2] [2 2 2] L
-   [ [ [ 1 2 ] [ 1 2 ] ] [ [ 1 2 ] [ 1 2 ] ] ] 
+   [ [ [ 1 2 ] [ 1 2 ] ] [ [ 1 2 ] [ 1 2 ] ] ]
    aya> 100R [2 3] L
    [ [ 1 2 3 ] [ 4 5 6 ] ]
 
 Flatten (``.F``)
-''''''''''''''''
+^^^^^^^^^^^^^^^^
 
 ::
 
    aya> [[1 2] [3] 4 [[5] 6]] .F
-   [ 1 2 3 4 5 6 ] 
+   [ 1 2 3 4 5 6 ]
 
 Pop from front / back
-'''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^
 
 ::
 
    aya> [1 2 3] B
-   [ 1 2 ] 3 
+   [ 1 2 ] 3
    aya> [1 2 3] V
-   [ 2 3 ] 1 
+   [ 2 3 ] 1
 
 Append to front / back
-''''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^
 
 ::
 
    aya> 1 [2 3] .B
-   [ 2 3 1 ] 
+   [ 2 3 1 ]
    aya> 1 [2 3] .V
-   [ 1 2 3 ] 
+   [ 1 2 3 ]
 
 Generators
-^^^^^^^^^^
+~~~~~~~~~~
 
 Range (``R``)
-'''''''''''''
+^^^^^^^^^^^^^
 
 One item: create a range from ``1`` (or ``'a'``) to that number.
 
@@ -212,7 +211,7 @@ as a step.
    [2 2.5 4] R      .# => [2 2.5 3 3.5 4]
 
 List comprehension
-~~~~~~~~~~~~~~~~~~
+------------------
 
 When commas are used inside of a list literal, the list is created using
 list comprehension. List comprehension follows the format
@@ -275,7 +274,7 @@ sections.
    [ "hw" "eo" "lr" "ll" "od" ]
 
 The Broadcast Operator
-~~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
 ``#`` is a very powerful *infix* operator. It’s primary function is map.
 It takes the arguments from its right side and maps them to the list on
@@ -321,19 +320,19 @@ on the left and a block on the right:
 ::
 
    aya> [1 2 3] :# {3+}
-   [ 4 5 6 ] 
+   [ 4 5 6 ]
 
    aya> [1 2 3] 3 :# +
    ERROR: Empty stack at operator ':#'
 
    aya> [1 2 3] 3 # +
-   [ 4 5 6 ] 
+   [ 4 5 6 ]
 
    aya> [1 2 3] 3 :# {+}
    TYPE ERROR: Type error at (:#):
        Expected ((L:#B|D:#B))
        Recieved ({+} 3 )
    stack:
-       [ 1 2 3 ] 
+       [ 1 2 3 ]
    just before:
 

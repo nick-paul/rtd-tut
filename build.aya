@@ -1,0 +1,16 @@
+#!/usr/bin/env aya
+
+import ::sys
+import ::io
+
+path.aya "manual" + :source;
+"./docs/source" path! :dest;
+
+.# Convert markdown files to rst files
+source sys.readdir.[{".md"N0>}] :# {file : filename out in,
+    file "." |.[0] :filename;
+    dest "$filename.rst" + :out;
+    source file +: in;
+    "Converting $in -> $out" :P
+    ["pandoc" "--from=markdown" "--to=rst" "--output=$out"  "$in"] :{sys.exec}
+};
