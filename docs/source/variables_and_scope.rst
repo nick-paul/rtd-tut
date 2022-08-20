@@ -15,7 +15,7 @@ after the assignment has occurred.
    4
 
 Variable Scope
-==============
+--------------
 
 A new scope is introduced if a block contains any variable declaration
 in its header. When a variable assignment occurs, the interpreter will

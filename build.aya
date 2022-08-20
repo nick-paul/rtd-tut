@@ -14,3 +14,11 @@ source sys.readdir.[{".md"N0>}] :# {file : filename out in,
     "Converting $in -> $out" :P
     ["pandoc" "--from=markdown" "--to=rst" "--output=$out"  "$in"] :{sys.exec}
 };
+
+.# Operator page
+from "./gen_op_tables" import ::op_page_str
+.# Write to temp file
+op_page_str "ophtml.html" 0 .G
+.# Use pandoc to convert file
+dest "operators.rst" + :op_out;
+["pandoc" "--from=markdown" "--to=rst" "--output=$op_out"  "./ophtml.html"] :{sys.exec}

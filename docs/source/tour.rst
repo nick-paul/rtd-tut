@@ -1,5 +1,8 @@
+Tour of Aya
+===========
+
 Basic language features
-=======================
+-----------------------
 
 Aya is a stack based language.
 
@@ -269,7 +272,7 @@ completely in aya!)*, **exception handling**, built in **plotting** and
 **GUI dialogs**, **list comprehension**, and **more**!
 
 Standard library
-================
+----------------
 
 The Aya standard library consists of type definitions, mathematical
 functions, string and list operations, plotting tools and even a small
@@ -280,7 +283,7 @@ contains a file which defines extended ASCII operators for use when code
 golfing.
 
 ``matrix``
-~~~~~~~~~~
+^^^^^^^^^^
 
 The ``matrix`` type provides a basic interface and operator overloads
 for working with matrices.
@@ -305,7 +308,7 @@ for working with matrices.
    |   20    8  -56 |
 
 ``dataframe``
-~~~~~~~~~~~~~
+^^^^^^^^^^^^^
 
 The ``dataframe`` type is an interface for working with tables. CSV
 files can be directly imported and modified or the data can be generated
@@ -337,7 +340,7 @@ by the program itself.
      z |    3    6
 
 ``golf``
-~~~~~~~~
+^^^^^^^^
 
 ``golf`` defines many short variables that are useful when golfing. It
 also uses the ``Mk`` operator to add additional single character
@@ -363,7 +366,7 @@ A few more examples
    [ 2 3 10 1000 [ ] 3.14159265 -1 0 {+} {-} ]
 
 ``date``
-~~~~~~~~
+^^^^^^^^
 
 The date script provides a basic interface for the date parsing
 operators ``Mh`` and ``MH``. It also provides basic date unit addition
@@ -384,7 +387,7 @@ and subtraction.
    "07/01/17"
 
 ``set``
-~~~~~~~
+^^^^^^^
 
 The ``set`` script defines a ``set`` type and many operator overloads.
 It defines ``s`` as a prefix operator for the set constructor allowing
@@ -405,7 +408,7 @@ the syntax ``s[ ... ]`` to create sets.
    s[ 1 3 ]
 
 ``enum``
-~~~~~~~~
+^^^^^^^^
 
 The ``enum`` script defines the ``enum`` keyword which uses dictionaries
 and metatables to create enums.
@@ -430,7 +433,7 @@ and metatables to create enums.
    1
 
 ``color``
-~~~~~~~~~
+^^^^^^^^^
 
 The ``color`` script defines basic color constructors and conversions.
 
@@ -456,7 +459,7 @@ The ``color`` script defines basic color constructors and conversions.
        0    0  255
 
 ``file``
-~~~~~~~~
+^^^^^^^^
 
 The ``file`` script defines variables for moving around and exploring
 the directory tree. It also defines the ``file`` type which is used for
