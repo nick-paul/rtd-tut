@@ -1,7 +1,7 @@
 Characters
 ==========
 
-*See*\ `Syntax Overview: Characters <./syntax_overview.md#characters>`__
+*See*\ `Syntax Overview: Characters <./syntax_overview.html#characters>`__
 
 Character literals are created using single quotes. Most characters do
 not need closing quotes.
@@ -61,7 +61,7 @@ operator.
 Strings
 =======
 
-*See*\ `Syntax Overview: Strings <./syntax_overview.md#strings>`__
+*See*\ `Syntax Overview: Strings <./syntax_overview.html#strings>`__
 
 Strings are created using the double quote character ``"``.
 

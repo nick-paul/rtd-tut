@@ -110,7 +110,7 @@ Double leading and trailing underscores are used for special variables
 Numbers
 -------
 
-*Main Page:*\ `Numbers <./number.md>`__
+*Main Page:*\ `Numbers <./number.html>`__
 
 Integers & Decimals
 ~~~~~~~~~~~~~~~~~~~
@@ -274,7 +274,7 @@ number  value
 Characters
 ----------
 
-*Main Page:*\ `Characters & Strings <./characters_and_strings.md>`__
+*Main Page:*\ `Characters & Strings <./characters_and_strings.html>`__
 
 Standard Characters
 ~~~~~~~~~~~~~~~~~~~
@@ -323,7 +323,7 @@ characters.
 Strings
 -------
 
-*Main Page:*\ `Characters & Strings <./characters_and_strings.md>`__
+*Main Page:*\ `Characters & Strings <./characters_and_strings.html>`__
 
 Standard String Literals
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -436,7 +436,7 @@ the ``::``
 Lists
 -----
 
-*Main Page:*\ `Lists <./lists.md>`__
+*Main Page:*\ `Lists <./lists.html>`__
 
 List Literals
 ~~~~~~~~~~~~~
@@ -477,7 +477,7 @@ Use ``[N| ... ]`` to capture items off the stack into the list
 List Comprehensions
 ~~~~~~~~~~~~~~~~~~~
 
-*See*\ `list comprehensions <./lists.md>`__
+*See*\ `list comprehensions <./lists.html>`__
 
 Indexing
 ~~~~~~~~
@@ -513,7 +513,7 @@ Dictionaries
 ------------
 
 *Main Page:*\ `Dictionaries and User
-Types <./dictionaries_and_user_types.md>`__
+Types <./dictionaries_and_user_types.html>`__
 
 Dictionary Literals
 ~~~~~~~~~~~~~~~~~~~
@@ -626,7 +626,7 @@ This notation can be used with `quoted variables <#variables>`__
 Blocks
 ------
 
-*Main Page:*\ `Blocks & Functions <./blocks_and_functions.md>`__
+*Main Page:*\ `Blocks & Functions <./blocks_and_functions.html>`__
 
 Basic Blocks
 ~~~~~~~~~~~~
@@ -678,8 +678,8 @@ Block Headers
 Use a comma in a block to create a block *header*. Block headers define
 local variables and block arguments
 
-See `Variables and Scope <./variables_and_scope.md>`__ and `Blocks and
-Functions <./blocks_and_functions.md>`__ for more details.
+See `Variables and Scope <./variables_and_scope.html>`__ and `Blocks and
+Functions <./blocks_and_functions.html>`__ for more details.
 
 If the header is empty, the block is parsed as a dict (see *Dictionary*)
 
@@ -764,7 +764,7 @@ Can mix & match locals and arguments
 Operators
 ---------
 
-*Main Page:*\ `Operators <./operators.md>`__
+*Main Page:*\ `Operators <./operators.html>`__
 
 Standard Operators
 ~~~~~~~~~~~~~~~~~~
@@ -877,7 +877,7 @@ on the stack
 List Map Shorthand (``#``)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*See*\ `Broadcast Operator <./lists.md>`__
+*See*\ `Broadcast Operator <./lists.html>`__
 
 Same as ``:#`` but automatically creates a block using `short block
 notation <#short-block-notation>`__

@@ -23,5 +23,18 @@ op_page_str "ophtml.html" 0 .G
 dest "operators.rst" + :op_out;
 ["pandoc" "--from=markdown" "--to=rst" "--output=$op_out"  "./ophtml.html"] :{sys.exec}
 
+.# Convert .md links to .html links
+dest sys.readdir.[{".rst"N0>}] :# {fname : content,
+    dest fname + P:fpath;
+    .# Read the file
+    fpath G :content;
+    .# replace .md links with .html ones
+    content ("\.md>" ".html>" .&) ("\.md#" ".html#" .&) :content;
+    .# Write it back to the file
+    fpath 'w file!:f;
+    content f.print;
+    f.close;
+};
+
 .# Copy images over
 ["cp" "-r" "$source/img" dest] :{sys.exec}
