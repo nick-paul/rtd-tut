@@ -32,7 +32,7 @@ To write negative numbers, use a colon (with or without a -)
 Special Number Literals
 -----------------------
 
-*See*\ `Syntax Overview: Numbers <./syntax_overview#numbers>`__
+*See*\ `Syntax Overview: Numbers <./syntax_overview.md#numbers>`__
 
 Special number literals always begin with a colon. Special number
 literals can be used to create negative numbers, **bignums**,

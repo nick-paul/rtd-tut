@@ -110,7 +110,7 @@ Double leading and trailing underscores are used for special variables
 Numbers
 -------
 
-*Main Page:*\ `Numbers <./numbers>`__
+*Main Page:*\ `Numbers <./number.md>`__
 
 Integers & Decimals
 ~~~~~~~~~~~~~~~~~~~
@@ -274,7 +274,7 @@ number  value
 Characters
 ----------
 
-*Main Page:*\ `Characters & Strings <./characters_and_strings>`__
+*Main Page:*\ `Characters & Strings <./characters_and_strings.md>`__
 
 Standard Characters
 ~~~~~~~~~~~~~~~~~~~
@@ -323,7 +323,7 @@ characters.
 Strings
 -------
 
-*Main Page:*\ `Characters & Strings <./characters_and_strings>`__
+*Main Page:*\ `Characters & Strings <./characters_and_strings.md>`__
 
 Standard String Literals
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -436,7 +436,7 @@ the ``::``
 Lists
 -----
 
-*Main Page:*\ `Lists <./lists>`__
+*Main Page:*\ `Lists <./lists.md>`__
 
 List Literals
 ~~~~~~~~~~~~~
@@ -477,7 +477,7 @@ Use ``[N| ... ]`` to capture items off the stack into the list
 List Comprehensions
 ~~~~~~~~~~~~~~~~~~~
 
-*See*\ `list comprehensions <./lists>`__
+*See*\ `list comprehensions <./lists.md>`__
 
 Indexing
 ~~~~~~~~
@@ -513,7 +513,7 @@ Dictionaries
 ------------
 
 *Main Page:*\ `Dictionaries and User
-Types <./dictionaries_and_user_types>`__
+Types <./dictionaries_and_user_types.md>`__
 
 Dictionary Literals
 ~~~~~~~~~~~~~~~~~~~
@@ -626,7 +626,7 @@ This notation can be used with `quoted variables <#variables>`__
 Blocks
 ------
 
-*Main Page:*\ `Blocks & Functions <./blocks_and_functions>`__
+*Main Page:*\ `Blocks & Functions <./blocks_and_functions.md>`__
 
 Basic Blocks
 ~~~~~~~~~~~~
@@ -678,8 +678,8 @@ Block Headers
 Use a comma in a block to create a block *header*. Block headers define
 local variables and block arguments
 
-See `Variables and Scope <./variables-and-scope>`__ and `Blocks and
-Functions <./blocks-and-functions>`__ for more details.
+See `Variables and Scope <./variables_and_scope.md>`__ and `Blocks and
+Functions <./blocks_and_functions.md>`__ for more details.
 
 If the header is empty, the block is parsed as a dict (see *Dictionary*)
 
@@ -877,8 +877,7 @@ on the stack
 List Map Shorthand (``#``)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*See*\ `Broadcast
-Operator <https://github.com/aya-lang/aya/wiki/Lists#the-broadcast-operator>`__
+*See*\ `Broadcast Operator <./lists.md>`__
 
 Same as ``:#`` but automatically creates a block using `short block
 notation <#short-block-notation>`__
@@ -892,8 +891,7 @@ Capture Instructions (`:``)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Takes a block ``B`` and a number ``N`` from the stack. Captures ``N``
-instructions from the instruction stack. See `Metaprogramming <x>`__ for
-more details
+instructions from the instruction stack.
 
 ::
 

@@ -1,7 +1,7 @@
 Variables
 =========
 
-*See*\ `Syntax Overview: Variables <./Syntax-Overview#variables>`__
+*See*\ `Syntax Overview: Variables <./syntax_overview.md#variables>`__
 
 Variables may only contain lower case letters and underscores. They are
 assigned using the colon (:) operator. The value is left on the stack

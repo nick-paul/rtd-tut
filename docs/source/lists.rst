@@ -1,7 +1,7 @@
 Lists
 =====
 
-*See*\ `Syntax Overview: Lists <./syntax_overview.html#lists>`__
+*See*\ `Syntax Overview: Lists <./syntax_overview.md#lists>`__
 
 List literals are created using square brackets and do not need commas.
 Literals are first evaluated as their own stack. The results remaining
@@ -113,7 +113,7 @@ which is equivalent to ``list[i] = item`` in C-style languages.
 Essential List Operators
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-*See*\ `Operators <https://github.com/aya-lang/aya/wiki/Operators>`__
+*See*\ `Operators <./operators.md>`__
 
 Extend (``K``)
 ^^^^^^^^^^^^^^
