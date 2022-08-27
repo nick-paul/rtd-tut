@@ -19,8 +19,8 @@ Contents
 .. toctree::
 
    tour
-   syntax_overview
    running_and_installation
+   syntax_overview
    operators
    number
    lists

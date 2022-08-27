@@ -1,8 +1,7 @@
 Lists
 =====
 
-*See*\ `Syntax Overview:
-Lists <https://github.com/aya-lang/aya/wiki/Syntax-Overview#lists>`__
+*See*\ `Syntax Overview: Lists <./syntax_overview.html#lists>`__
 
 List literals are created using square brackets and do not need commas.
 Literals are first evaluated as their own stack. The results remaining
