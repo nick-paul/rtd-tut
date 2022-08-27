@@ -110,7 +110,7 @@ Double leading and trailing underscores are used for special variables
 Numbers
 -------
 
-*Main Page:*\ `Numbers <./Numbers>`__
+*Main Page:*\ `Numbers <./numbers>`__
 
 Integers & Decimals
 ~~~~~~~~~~~~~~~~~~~
@@ -274,7 +274,7 @@ number  value
 Characters
 ----------
 
-*Main Page:*\ `Characters & Strings <./characters-and-strings>`__
+*Main Page:*\ `Characters & Strings <./characters_and_strings>`__
 
 Standard Characters
 ~~~~~~~~~~~~~~~~~~~
@@ -323,7 +323,7 @@ characters.
 Strings
 -------
 
-*Main Page:*\ `Characters & Strings <./characters-and-strings>`__
+*Main Page:*\ `Characters & Strings <./characters_and_strings>`__
 
 Standard String Literals
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -513,7 +513,7 @@ Dictionaries
 ------------
 
 *Main Page:*\ `Dictionaries and User
-Types <./dictionaries-and-user-types>`__
+Types <./dictionaries_and_user_types>`__
 
 Dictionary Literals
 ~~~~~~~~~~~~~~~~~~~
@@ -626,7 +626,7 @@ This notation can be used with `quoted variables <#variables>`__
 Blocks
 ------
 
-*Main Page:*\ `Blocks & Functions <./blocks-and-functions>`__
+*Main Page:*\ `Blocks & Functions <./blocks_and_functions>`__
 
 Basic Blocks
 ~~~~~~~~~~~~

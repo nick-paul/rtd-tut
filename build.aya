@@ -22,3 +22,6 @@ op_page_str "ophtml.html" 0 .G
 .# Use pandoc to convert file
 dest "operators.rst" + :op_out;
 ["pandoc" "--from=markdown" "--to=rst" "--output=$op_out"  "./ophtml.html"] :{sys.exec}
+
+.# Copy images over
+["cp" "-r" "$source/img" dest] :{sys.exec}

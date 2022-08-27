@@ -20,6 +20,7 @@ Contents
 
    tour
    syntax_overview
+   running_and_installation
    operators
    number
    lists

@@ -1,9 +1,6 @@
-Template for the Read the Docs tutorial
-=======================================
+# Aya Programming Language Documentation
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+[https://github.com/aya-lang/aya](https://github.com/aya-lang/aya)
 
-Read the tutorial here:
+Do not edit these files directly. They are generated from the Aya manual in the Aya repo and built with `build.aya`
 
-https://docs.readthedocs.io/en/stable/tutorial/
