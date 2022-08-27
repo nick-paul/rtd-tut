@@ -26,8 +26,9 @@ Contents
    lists
    characters_and_strings
    blocks_and_functions
-   dictionaries_and_user_types
+   dictionaries
    variables_and_scope
+   user_types
 
 
 

@@ -512,8 +512,7 @@ index
 Dictionaries
 ------------
 
-*Main Page:*\ `Dictionaries and User
-Types <./dictionaries_and_user_types.html>`__
+*Main Page:*\ `Dictionaries and User Types <./dictionaries.html>`__
 
 Dictionary Literals
 ~~~~~~~~~~~~~~~~~~~
