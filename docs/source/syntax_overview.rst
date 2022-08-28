@@ -842,8 +842,7 @@ Exceptions
 ============ =============================================
 Special Case Description
 ============ =============================================
-``:'``       `Symbol <#symbols>`__
-``:-``       `Negative Numbers <#negative-numbers>`__
+``:"``       `Symbol <#symbols>`__
 ``:{``       `Extension Operator <#extension-operators>`__
 ============ =============================================
 

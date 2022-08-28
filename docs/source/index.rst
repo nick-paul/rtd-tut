@@ -29,6 +29,7 @@ Contents
    dictionaries
    variables_and_scope
    user_types
+   standard_library
 
 
 
